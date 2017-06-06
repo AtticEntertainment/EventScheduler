@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/fullcalendar.min.css" rel="stylesheet" />
+    <link href="~/Content/scheduler.min.css" rel="stylesheet" />
+
+    <link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <script src="~/Scripts/moment.min.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/fullcalendar.min.js"></script>
+    <script src="~/Scripts/scheduler.min.js"></script>
+    <script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+    <script>
+        $(window).keydown(function (e) {
+            if (e.keyCode == 13) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        function BindStartEndDate(start, end) {
+            $(start).datetimepicker({
+                inline: false,
+                sideBySide: true,
+                stepping: 15,
+                format: 'MM/DD/YYYY hh:mm A'
+            }).on("dp.hide", function (e) {
+                $(end).data("DateTimePicker").options({
+                    minDate: $(start).data("DateTimePicker").date()
+                });
+            });
+            $(end).datetimepicker({
+                inline: false,
+                sideBySide: true,
+                stepping: 15,
+                format: 'MM/DD/YYYY hh:mm A'
+            }).on("dp.hide", function (e) {
+                $(start).data("DateTimePicker").options({
+                    maxDate: $(end).data("DateTimePicker").date()
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+
+    @RenderSection("scripts", false)
+</body>
+</html>

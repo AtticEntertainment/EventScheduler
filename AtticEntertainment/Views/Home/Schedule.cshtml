@@ -1,0 +1,345 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<script>
+    var EditMode;
+    function ToggleEditMode(value) {
+        if (value !== undefined) {
+            EditMode = value;
+        } else if (EditMode !== undefined) {
+            EditMode = !EditMode;
+        } else {
+            EditMode = false;
+        }
+
+        if (EditMode) {
+            $('#calendar').fullCalendar('option', 'selectable', true);
+            $('#calendar').fullCalendar('option', 'editable', true);
+            $(".fc-editMode-button").text("Edit Mode: On");
+        } else {
+            $('#calendar').fullCalendar('option', 'selectable', false);
+            $('#calendar').fullCalendar('option', 'editable', false);
+            $(".fc-editMode-button").text("Edit Mode: Off")
+        }
+    }
+
+    function CreateActivity(resource) {
+        var data = {};
+        data.ActivityName = $("#activityTitle").val();
+        data.ActivityAllDay = false;
+        data.ActivityStart = $("#activityStart").data("DateTimePicker").date().format("YYYY-MM-DD HH:mm:ss");
+        data.ActivityEnd = $("#activityEnd").data("DateTimePicker").date().format("YYYY-MM-DD HH:mm:ss");
+        data.ActivityScope = 0;
+        data.ActivityRoom_RoomId = resource;
+
+        $.ajax({
+            url: "/api/ActivitiesAPI/" + resource,
+            method: "POST",
+            data: data,
+            beforeSend: function (xhr) {
+                xhr.overrideMimeType("application/json");
+            }
+        }).done(function (data, textStatus, jqXHR) {
+            $('#EditActivityDialog').modal('hide');
+        }).fail(function (data, textStatus, jqXHR) {
+            console.log("Error");
+        }).always(function (data, textStatus, jqXHR) {
+            fetchRooms();
+        });
+    }
+
+    function MoveActivity(event, delta, revertFunc, jsEvent, ui, view) {
+        var data = {};
+        data.ActivityId = event.id;
+        data.ActivityName = event.title;
+        data.ActivityAllDay = false;
+        data.ActivityStart = event.start.format("YYYY-MM-DD HH:mm:ss");
+        data.ActivityEnd = event.end.format("YYYY-MM-DD HH:mm:ss");
+        data.ActivityScope = 0;
+
+        $.ajax({
+            url: "/api/ActivitiesAPI/" + event.id,
+            method: "PUT",
+            data: data,
+            beforeSend: function (xhr) {
+                xhr.overrideMimeType("application/json");
+            }
+        }).done(function (data, textStatus, jqXHR) {
+        }).fail(function (data, textStatus, jqXHR) {
+            console.log("Error");
+        }).always(function (data, textStatus, jqXHR) {
+            fetchRooms();
+        });
+    }
+
+    function DeleteActivity(id) {
+        $.ajax({
+            url: "/api/ActivitiesAPI/" + id,
+            method: "DELETE",
+            beforeSend: function (xhr) {
+                xhr.overrideMimeType("application/json");
+            }
+        }).done(function (data, textStatus, jqXHR) {
+            $('#EditActivityDialog').modal('hide');
+        }).fail(function (data, textStatus, jqXHR) {
+            console.log("Error");
+        }).always(function (data, textStatus, jqXHR) {
+            fetchRooms();
+        });
+    }
+
+    function UpdateActivity(id) {
+        var data = {};
+        data.ActivityId = id;
+        data.ActivityName = $("#activityTitle").val();
+        data.ActivityAllDay = false;
+        data.ActivityStart = $("#activityStart").data("DateTimePicker").date().format("YYYY-MM-DD HH:mm:ss");
+        data.ActivityEnd = $("#activityEnd").data("DateTimePicker").date().format("YYYY-MM-DD HH:mm:ss");
+        data.ActivityScope = 0;
+
+        $.ajax({
+            url: "/api/ActivitiesAPI/" + id,
+            method: "PUT",
+            data: data,
+            beforeSend: function (xhr) {
+                xhr.overrideMimeType("application/json");
+            }
+        }).done(function (data, textStatus, jqXHR) {
+            $('#EditActivityDialog').modal('hide');
+        }).fail(function (data, textStatus, jqXHR) {
+            console.log("Error");
+        }).always(function (data, textStatus, jqXHR) {
+            fetchRooms();
+        });
+    }
+
+	$(function() {
+
+	    $('#calendar').fullCalendar({
+	        schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
+            defaultView: 'eventView1',
+			slotLabelInterval: 30,
+			slotDuration: '00:30:00',
+			slotLabelFormat: 'h:mma',
+			slotEventOverlap: false,
+			eventOverlap: false,
+			selectOverlap: false,
+			customButtons: {
+			    editMode: {
+			        click: ToggleEditMode
+                },
+                refresh: {
+                    text: 'Refresh',
+                    click: fetchRooms
+                },
+                viewChange: {
+                    text: 'Toggle View',
+                    click: changeView
+                }
+			},
+			header: {
+			    left: '',
+			    center: 'title',
+                right: 'editMode viewChange refresh'
+			},
+			views: {
+                eventView1: {
+                    type: 'agenda',
+                    duration: { days: 1 },
+                    groupByResource: true,
+                },
+                eventView2: {
+                    type: 'agenda',
+                    duration: { days: 2 },
+                    groupByResource: true,
+                },
+                eventView3: {
+                    type: 'agenda',
+                    duration: { days: 3 },
+                    groupByResource: true,
+                },
+                eventView4: {
+                    type: 'agenda',
+                    duration: { days: 4 },
+                    groupByResource: true,
+                },
+                eventView5: {
+                    type: 'agenda',
+                    duration: { days: 5 },
+                    groupByResource: true,
+                },
+                eventView6: {
+                    type: 'agenda',
+                    duration: { days: 6 },
+                    groupByResource: true,
+                },
+                eventView7: {
+                    type: 'agenda',
+                    duration: { days: 7 },
+                    groupByResource: true,
+                }
+			},
+			resources: [],
+            events: [],
+            eventSources: [],
+
+            select: function (start, end, jsEvent, view, resource) {
+                $("#activityTitle").val("");
+                BindStartEndDate($('#activityStart'), $('#activityEnd'));
+
+                if (start.format("YYYYMMDDHHmm") < end.format("YYYYMMDDHHmm")) {
+                    $("#activityStart").data("DateTimePicker").date(start);
+                    $("#activityEnd").data("DateTimePicker").date(end);
+                } else {
+                    $("#activityStart").data("DateTimePicker").date(end);
+                    $("#activityEnd").data("DateTimePicker").date(start);
+                }
+                $("#save").attr("onclick", "CreateActivity(" + resource.id + ")")
+                $("#delete").attr("onclick", "DeleteActivity(0)")
+                $("#delete").hide();
+                $(".modal-title").first().text("Create Activity")
+
+                $('#EditActivityDialog').modal('show');
+            },
+            eventClick: function (event, jsEvent, view) {
+                if (EditMode) {
+                    $("#activityTitle").val(event.title);
+                    BindStartEndDate($('#activityStart'), $('#activityEnd'));
+                    $("#activityStart").data("DateTimePicker").date(moment(event.start));
+                    $("#activityEnd").data("DateTimePicker").date(moment(event.end));
+                    $("#save").attr("onclick", "UpdateActivity(" + event.id + ")")
+                    $("#delete").attr("onclick", "DeleteActivity(" + event.id + ")")
+                    $("#delete").show();
+                    $(".modal-title").first().text("Edit Activity")
+                    $('#EditActivityDialog').modal('show');
+                }
+            },
+            eventResize: MoveActivity,
+            eventDrop: MoveActivity,
+            allDaySlot: false
+	    });
+
+	    ToggleEditMode();
+    });
+
+    function fetchRooms() {
+        $("#calendar").fullCalendar('removeEvents');
+
+        var id = location.pathname.split('/');
+        id = id[id.length - 1];
+        $.ajax({
+            url: "/api/EventsAPI/" + id,
+            method: "GET",
+            beforeSend: function (xhr) {
+                xhr.overrideMimeType("application/json");
+            }
+        }).done(function (data, textStatus, jqXHR) {
+            var start = moment(data.EventStart);
+            start = start.startOf('day');
+
+            var end = moment(data.EventEnd);
+            end = end.startOf('day');
+
+            // Move to correct start day
+            $('#calendar').fullCalendar('gotoDate', start);
+            switch (end.diff(start, 'days') + 1) {
+                case 1:
+                    $('#calendar').fullCalendar('changeView', 'eventView1');
+                    break;
+                case 2:
+                    $('#calendar').fullCalendar('changeView', 'eventView2');
+                    break;
+                case 3:
+                    $('#calendar').fullCalendar('changeView', 'eventView3');
+                    break;
+                case 4:
+                    $('#calendar').fullCalendar('changeView', 'eventView4');
+                    break;
+                case 5:
+                    $('#calendar').fullCalendar('changeView', 'eventView5');
+                    break;
+                case 6:
+                    $('#calendar').fullCalendar('changeView', 'eventView6');
+                    break;
+                default:
+                    $('#calendar').fullCalendar('changeView', 'eventView7');
+                    break;
+            }
+
+            data.EventRooms.forEach(function (EventRoom) {
+                $('#calendar').fullCalendar('addResource', { id: EventRoom.RoomId, title: EventRoom.RoomName });
+
+                EventRoom.RoomActivities.forEach(function (RoomActivity) {
+                    $('#calendar').fullCalendar('addEventSource', [{ id: RoomActivity.ActivityId, resourceId: EventRoom.RoomId, start: RoomActivity.ActivityStart, end: RoomActivity.ActivityEnd, title: RoomActivity.ActivityName }])
+                })
+            })
+        })
+    }
+
+    function changeView() {
+        // Toggle event view: listWeek
+    }
+
+    $(document).ready(function () {
+        fetchRooms()
+    })
+</script>
+<div id='calendar'></div>
+
+<!-- Modal -->
+<div id="EditActivityDialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                
+
+                <table class="table table-hover">
+                    <tbody>
+                        <tr>
+                            <th style="border-top: unset">
+                                <label for="activityTitle">Title</label>
+                            </th>
+                            <td style="border-top: unset">
+                                <input type="text" class="form-control" id="activityTitle">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="activityStart">Start Time</label>
+                            </th>
+                            <td>
+                                <input type="text" class="form-control" id="activityStart">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="activityEnd">End Time</label>
+                            </th>
+                            <td>
+                                <input type="text" class="form-control" id="activityEnd">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="hidden" name="activityId" value="0" />
+
+            </div>
+            <div class="modal-footer">
+                <span style="float: left">
+                    <button type="button" class="btn btn-default btn-danger" id="delete">Delete</button>
+                </span>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-default btn-primary" onclick="" id="save">Save</button>
+            </div>
+        </div>
+
+    </div>
+</div>

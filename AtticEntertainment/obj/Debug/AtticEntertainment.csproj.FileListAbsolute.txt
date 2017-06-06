@@ -1,0 +1,205 @@
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csc.exe
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csc.exe.config
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csc.rsp
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csi.exe
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csi.rsp
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.AppContext.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\vbc.exe
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\vbc.exe.config
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\vbc.rsp
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\VBCSCompiler.exe
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\AtticEntertainment.dll.config
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\AtticEntertainment.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\AtticEntertainment.pdb
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Antlr3.Runtime.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\EntityFramework.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\EntityFramework.SqlServer.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Newtonsoft.Json.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Net.Http.Formatting.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Helpers.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Http.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Http.WebHost.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Mvc.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Optimization.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Razor.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.Razor.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\WebGrease.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Antlr3.Runtime.pdb
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\EntityFramework.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\EntityFramework.SqlServer.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Newtonsoft.Json.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Net.Http.Formatting.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Helpers.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Http.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Http.WebHost.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Mvc.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Optimization.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Razor.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.Razor.xml
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.csprojResolveAssemblyReference.cache
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.Migrations.InitialCreate.resources
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.Migrations._201702021823.resources
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.csproj.GenerateResource.Cache
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.dll
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.pdb
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.Migrations._201702051627.resources
+C:\Users\Christopher Giles\Source.old\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.Migrations._201702051638.resources
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csc.exe
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csc.exe.config
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csc.rsp
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csi.exe
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csi.rsp
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.AppContext.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\vbc.exe
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\vbc.exe.config
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\vbc.rsp
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\VBCSCompiler.exe
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\AtticEntertainment.dll.config
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\AtticEntertainment.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\AtticEntertainment.pdb
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Antlr3.Runtime.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\EntityFramework.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\EntityFramework.SqlServer.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Newtonsoft.Json.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Net.Http.Formatting.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Helpers.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Http.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Http.WebHost.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Mvc.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Optimization.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Razor.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.Razor.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\WebGrease.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Antlr3.Runtime.pdb
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\EntityFramework.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\EntityFramework.SqlServer.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Newtonsoft.Json.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Net.Http.Formatting.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Helpers.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Http.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Http.WebHost.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Mvc.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Optimization.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Razor.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.Razor.xml
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.Migrations.InitialCreate.resources
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.Migrations._201702021823.resources
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.Migrations._201702051627.resources
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.Migrations._201702051638.resources
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.Migrations._201702070123.resources
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.Migrations._201702070144.resources
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.Migrations._201702070146.resources
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.csproj.GenerateResource.Cache
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.dll
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.pdb
+C:\Users\Christopher Giles\Source\Repos\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.csprojResolveAssemblyReference.cache
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csc.exe
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csc.exe.config
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csc.rsp
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csi.exe
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\csi.rsp
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.AppContext.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.Collections.Immutable.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.IO.FileSystem.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\System.Reflection.Metadata.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\vbc.exe
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\vbc.exe.config
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\vbc.rsp
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\VBCSCompiler.exe
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\roslyn\VBCSCompiler.exe.config
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\AtticEntertainment.dll.config
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\AtticEntertainment.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\AtticEntertainment.pdb
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Antlr3.Runtime.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\EntityFramework.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\EntityFramework.SqlServer.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Microsoft.Web.Infrastructure.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Newtonsoft.Json.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Net.Http.Formatting.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Helpers.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Http.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Http.WebHost.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Mvc.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Optimization.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Razor.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.Deployment.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.Razor.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\WebGrease.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Antlr3.Runtime.pdb
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\EntityFramework.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\EntityFramework.SqlServer.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\Newtonsoft.Json.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Net.Http.Formatting.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Helpers.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Http.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Http.WebHost.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Mvc.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Optimization.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.Razor.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.Deployment.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\bin\System.Web.WebPages.Razor.xml
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.csprojResolveAssemblyReference.cache
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.dll
+D:\files\AtticEntertainmentV2\AtticEntertainment\AtticEntertainment\obj\Debug\AtticEntertainment.pdb

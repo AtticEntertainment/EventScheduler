@@ -1,0 +1,400 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+<script>
+    function AddRoom(EventId) {
+        var data = {};
+        data.RoomName = "";
+
+        $.ajax({
+            url: "/api/RoomsAPI/" + EventId,
+            method: "POST",
+            data: data,
+            beforeSend: function (xhr) {
+                xhr.overrideMimeType("application/json");
+            }
+        }).done(function (data, textStatus, jqXHR) {
+        }).fail(function (data, textStatus, jqXHR) {
+            console.log("Error");
+        }).always(function (data, textStatus, jqXHR) {
+            EditRooms(EventId);
+        });
+    }
+
+    function DeleteRoom(RoomId, EventId) {
+        $.ajax({
+            url: "/api/RoomsAPI/" + RoomId,
+            method: "DELETE",
+            beforeSend: function (xhr) {
+                xhr.overrideMimeType("application/json");
+            }
+        }).done(function (data, textStatus, jqXHR) {
+        }).fail(function (data, textStatus, jqXHR) {
+            console.log("Error");
+        }).always(function (data, textStatus, jqXHR) {
+            EditRooms(EventId);
+        });
+    }
+
+    function UpdateRoom(RoomId, EventId) {
+        var data = {};
+        data.RoomId = RoomId;
+        data.RoomName = $("#EditRow" + RoomId).first().val();
+
+        $.ajax({
+            url: "/api/RoomsAPI/" + RoomId,
+            method: "PUT",
+            data: data,
+            beforeSend: function (xhr) {
+                xhr.overrideMimeType("application/json");
+            }
+        }).done(function (data, textStatus, jqXHR) {
+        }).fail(function (data, textStatus, jqXHR) {
+            console.log("Error");
+        }).always(function (data, textStatus, jqXHR) {
+            EditRooms(EventId);
+        });
+    }
+
+    function EditRooms(id) {
+        $.ajax({
+            url: "/api/EventsAPI/" + id,
+            method: "GET",
+            beforeSend: function (xhr) {
+                xhr.overrideMimeType("application/json");
+            }
+        }).done(function (data, textStatus, jqXHR) {
+            $("#Add").attr("onclick", "AddRoom(" + id + ")");
+            var html = "";
+            data.EventRooms.forEach(function (Room, index) {
+                html += "<tr>";
+                html += "<td><input type='text' value='" + Room.RoomName + "' class='form-control' id='EditRow" + Room.RoomId + "' /></td>";
+                html += "<td>";
+                if (index != 0) {
+                    html += "<button type='button' class='btn btn-danger' onclick='DeleteRoom(" + Room.RoomId + ", " + id + ")'>Delete</button> ";
+                }
+                html += "<button type='button' class='btn btn-default' onclick='UpdateRoom(" +  Room.RoomId + ", " + id + ")'>Save</button>";
+                html += "</td>";
+                html += "</tr>";
+            });
+            $(".modal-body tbody").html(html);
+            console.log(data.EventRooms)
+        }).fail(function (data, textStatus, jqXHR) {
+            console.log("Error")
+        }).always(function (data, textStatus, jqXHR) {
+        });
+        $("#RoomDialog").modal('show');
+    }
+
+    function UpdateEvent(id) {
+        $.ajax({
+            url: "/api/EventsAPI/" + id,
+            method: "GET",
+            beforeSend: function (xhr) {
+                xhr.overrideMimeType("application/json");
+            }
+        }).done(function (data, textStatus, jqXHR) {
+            var row = $("#EventsGrid tbody tr button[onclick='UpdateEvent(" + id + ");']").closest("tr");
+            data.EventName = $(row).find("#txtEditEventName").val();
+            data.EventStart = $(row).find("#txtEditEventStart").val();
+            data.EventEnd = $(row).find("#txtEditEventEnd").val();
+            $(row).find("[name='EventRooms[]']").each(function (NewEventRoomIndex, NewEventRoom) {
+
+                // TODO: Create Room
+                if ($(NewEventRoom).attr("id") === undefined) {
+                    var Room = {};
+                    Room.RoomName = $(NewEventRoom).val();
+                    Room.RoomActivities = [];
+                    data.EventRooms.push(Room);
+
+                // TODO: Update Room
+                } else {
+
+                }
+            });
+
+            $.ajax({
+                url: "/api/EventsAPI/" + id,
+                method: "PUT",
+                data: data,
+                beforeSend: function (xhr) {
+                    xhr.overrideMimeType("application/json");
+                }
+            }).done(function (data, textStatus, jqXHR) {
+            }).fail(function (data, textStatus, jqXHR) {
+                console.log("Error")
+            }).always(function (data, textStatus, jqXHR) {
+                fetchEvents();
+            });
+        }).fail(function (data, textStatus, jqXHR) {
+            console.log("Error")
+        }).always(function (data, textStatus, jqXHR) {
+            
+        });
+    }
+
+    $(document).ready(function () {
+        BindStartEndDate($('#txtAddEventStart'), $('#txtAddEventEnd'));
+        fetchEvents();
+    });
+
+    function EditEvent(id) {
+        $.ajax({
+            url: "/api/EventsAPI/" + id,
+            method: "GET",
+            beforeSend: function (xhr) {
+                xhr.overrideMimeType("application/json");
+            }
+        }).done(function (data, textStatus, jqXHR) {
+            var html = "<td><input type='text' class='form-control' name='EventName' id='txtEditEventName' value='" + data.EventName + "' /></td>";
+            html += "<td><div style='position: relative'><input type='text' class='form-control' name='EventStart' id='txtEditEventStart' value='" + data.EventStart + "' /></div></td>";
+            html += "<td><div style='position: relative'><input type='text' class='form-control' name='EventEnd' id='txtEditEventEnd' value='" + data.EventEnd + "' /></div></td>";
+
+            html += "<td>";
+            html += "<button type='button' class='btn btn-default' onclick='EditRooms(" + id + ")'>Rooms</button>";
+            data.EventRooms.forEach(function (EventRoom, index) {
+                //html += "<div class='input-group'><input type='text' class='form-control' name='EventRooms[]' value='" + EventRoom.RoomName + "' id='" + EventRoom.RoomId + "' />";
+                //if (index !== 0) {
+                //    html += "<span class='input-group-addon btn btn-default' onclick='RemoveEventRoom(this);'><span class='glyphicon glyphicon-minus'></span></span>";
+                //}
+                //html += "<span class='input-group-addon btn btn-default' onclick=\"AddEventRoom($(this).closest('.input-group'));\"><span class='glyphicon glyphicon-plus'></span></span></div>";
+            });
+            html += "</td>";
+            html += "<td>";
+            html += "<button type='button' class='btn btn-default' onclick='fetchEvents();'><span class='glyphicon glyphicon-remove'></span> Cancel</button> ";
+            html += "<button type='button' class='btn btn-default' onclick='UpdateEvent(" + data.EventId + ");'><span class='glyphicon glyphicon-ok'></span> Save</button>";
+            html += "</td>";
+
+            var row = $("#EventsGrid tbody tr button[onclick='EditEvent(" + id + ");']").closest("tr");
+            $(row).html(html)
+            $(document).ready(function () {
+                BindStartEndDate($(row).find("#txtEditEventStart").first(), $(row).find("#txtEditEventEnd").first());
+                $(row).find("#txtEditEventStart").data("DateTimePicker").date(moment(data.EventStart));
+                $(row).find("#txtEditEventEnd").data("DateTimePicker").date(moment(data.EventEnd));
+                $(row).find("#txtEditEventStart").first().trigger("dp.hide");
+                $(row).find("#txtEditEventEnd").first().trigger("dp.hide");
+            });
+        }).fail(function (data, textStatus, jqXHR) {
+            console.log("Error")
+        }).always(function (data, textStatus, jqXHR) {
+
+        });
+    }
+
+    function DeleteEvent(id) {
+        $.ajax({
+            url: "/api/EventsAPI/" + id,
+            method: "DELETE",
+            beforeSend: function (xhr) {
+                xhr.overrideMimeType("application/json");
+            }
+        }).done(function (data, textStatus, jqXHR) {
+        }).fail(function (data, textStatus, jqXHR) {
+            console.log("Error")
+        }).always(function (data, textStatus, jqXHR) {
+            fetchEvents();
+        });
+    }
+
+    function AddEvent() {
+        if ($("#EventsGrid tfoot #txtAddEventName").val().trim().length === 0 ||
+            $("#EventsGrid tfoot #txtAddEventStart").val().trim().length !== 19 ||
+            $("#EventsGrid tfoot #txtAddEventEnd").val().trim().length !== 19 ||
+            $("#EventsGrid tfoot input[name='EventRooms[]']").first().val().trim().length === 0) {
+            return false;
+        } else {
+            var data = {};
+            data.EventName = $("#EventsGrid tfoot #txtAddEventName").val().trim();
+            data.EventStart = $("#EventsGrid tfoot #txtAddEventStart").val().trim();
+            data.EventEnd = $("#EventsGrid tfoot #txtAddEventEnd").val().trim();
+            data.EventRooms = [];
+            $("#EventsGrid tfoot input[name='EventRooms[]']").each(function (index, obj) {
+                if ($(obj).val().trim().length !== 0) {
+                    var Room = {};
+                    Room.RoomName = $(obj).val().trim();
+                    data.EventRooms.push(Room);
+                }
+            });
+
+            $.ajax({
+                url: "/api/EventsAPI",
+                method: "POST",
+                data: data,
+                beforeSend: function (xhr) {
+                    xhr.overrideMimeType("application/json");
+                }
+            }).done(function (data, textStatus, jqXHR) {
+                $("#EventsGrid tfoot #txtAddEventName").val("");
+                $("#EventsGrid tfoot #txtAddEventStart").val("");
+                $("#EventsGrid tfoot #txtAddEventEnd").val("");
+                $("#EventsGrid tfoot #txtAddEventRoom0").val("");
+                $("#EventsGrid tfoot [name='EventRooms[]']").first().val("");
+                $("#EventsGrid tfoot [name='EventRooms[]']:not(:first)").each(function () {
+                    RemoveEventRoom(this)
+                })
+
+            }).fail(function (data, textStatus, jqXHR) {
+                console.log("Error")
+            }).always(function (data, textStatus, jqXHR) {
+                fetchEvents();
+            });
+        }
+    }
+
+    
+
+    function fetchEvents() {
+
+        setTimeout(function () {
+            $.ajax({
+                url: "/api/EventsAPI",
+                method: "GET",
+                beforeSend: function (xhr) {
+                    xhr.overrideMimeType("application/json");
+                }
+            }).done(function (data, textStatus, jqXHR) {
+
+                var html = "";
+                $(data).each(function (index, obj) {
+                    html += "<tr>";
+                    html += "<td><a href='/Home/Schedule/" + obj.EventId + "'>" + obj.EventName + "</a></td>";
+                    html += "<td>" + moment(obj.EventStart).format("MM/DD/YYYY hh:mm A") + "</td>";
+                    html += "<td>" + moment(obj.EventEnd).format("MM/DD/YYYY hh:mm A") + "</td>";
+                    html += "<td>";
+
+                    obj.EventRooms.forEach(function (EventRoom) {
+                        html += "<div>" + EventRoom.RoomName + "</div>";
+                    })
+
+                    html += "</td>";
+                    html += "<td>";
+                    html += "<button type='button' class='btn btn-default' onclick='EditEvent(" + obj.EventId + ");'><span class='glyphicon glyphicon-pencil'></span> Edit Event</button> ";
+                    html += "<button type='button' class='btn btn-default' onclick='DeleteEvent(" + obj.EventId + ");'><span class='glyphicon glyphicon-minus'></span> Delete Event</button>";
+                    html += "</td>";
+                    html += "</tr>"
+                });
+                $("#EventsGrid tbody").html(html);
+
+            }).fail(function (data, textStatus, jqXHR) {
+                console.log("Error")
+            }).always(function (data, textStatus, jqXHR) {
+
+            })
+        }, 50);
+    }
+
+    function AddEventRoom(sender, value) {
+        if (value === undefined) {
+            value = "";
+        }
+
+        var html = '<div class="input-group">';
+        html += '  <input type="text" class="form-control" name="EventRooms[]" value="' + value + '" />';
+        html += '  <span class="input-group-addon btn btn-default" onclick="RemoveEventRoom(this);">';
+        html += '    <span class="glyphicon glyphicon-minus"></span>';
+        html += '  </span>';
+        html += '  <span class="input-group-addon btn btn-default" onclick="AddEventRoom($(this).closest(\'.input-group\'));">';
+        html += '    <span class="glyphicon glyphicon-plus"></span>';
+        html += '  </span>';
+        html += '</div>';
+        $(html).insertAfter(sender);
+    }
+
+    function RemoveEventRoom(sender) {
+        sender = $(sender).closest(".input-group");
+        $(sender).remove();
+    }
+</script>
+<form>
+    <table class="table table-striped table-hover" id="EventsGrid" style="table-layout: fixed">
+        <thead>
+            <tr>
+                <th>Event Name:</th>
+                <th>Event Start:</th>
+                <th>Event End:</th>
+                <th>Rooms:</th>
+                <th style="text-align: right">
+                    <button type="button" class="btn btn-default" onclick="fetchEvents();">
+                        <span class="glyphicon glyphicon-refresh"></span> Refresh
+                    </button>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr></tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" name="EventName" id="txtAddEventName" />
+                </td>
+                <td>
+                    <div style="position: relative">
+                        <input type="text" class="form-control" name="EventStart" id="txtAddEventStart" />
+                    </div>
+                </td>
+                <td>
+                    <div style="position: relative">
+                        <input type="text" class="form-control" name="EventEnd" id="txtAddEventEnd" />
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="EventRooms[]" />
+                        <span class="input-group-addon btn btn-default" onclick="AddEventRoom($(this).closest('.input-group'));">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </span>
+                    </div>
+                </td>
+                <th>
+                    <button type="button" class="btn btn-default" onclick="AddEvent()"><span class="glyphicon glyphicon-plus"></span> Add Event</button>
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+</form>
+
+<!-- Modal -->
+<div id="RoomDialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th style="border-top: unset">
+                                Room
+                            </th>
+                            <th style="border-top: unset">
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" style="text-align: right">
+                                <button type="button" class="btn btn-default btn-default" id="Add">Add</button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <input type="hidden" name="activityId" value="0" />
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
